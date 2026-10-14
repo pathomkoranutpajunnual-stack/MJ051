@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathomkoranut Prajunnual - Academic Portfolio</title>
+    <!-- Google Fonts: Prompt & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        },
+                        health: {
+                            50: '#ecfdf5',
+                            500: '#10b981',
+                            600: '#059669',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Prompt', 'Inter', sans-serif;
+            background-color: #fafafa;
+            color: #1f2937;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #6d28d9 0%, #2563eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 glass-card transition-all duration-300 border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold text-lg shadow-md shadow-brand-500/20">
+                    M
+                </div>
+                <div>
+                    <span class="font-bold text-slate-900 tracking-tight block text-base leading-tight">MOJI PORTFOLIO</span>
+                    <span class="text-xs text-slate-500 block">สาธารณสุขศาสตร์บัณฑิต</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-brand-600 transition-colors">เกี่ยวกับฉัน</a>
+                <a href="#education" class="hover:text-brand-600 transition-colors">การศึกษา</a>
+                <a href="#experience" class="hover:text-brand-600 transition-colors">ประสบการณ์ชุมชน</a>
+                <a href="#activities" class="hover:text-brand-600 transition-colors">กิจกรรม & ผู้นำ</a>
+                <a href="#certificates" class="hover:text-brand-600 transition-colors">เกียรติบัตร</a>
+                <a href="#github-deploy" class="px-4 py-2 rounded-full bg-brand-50 text-brand-700 hover:bg-brand-100 font-semibold transition-all">
+                    <i class="fa-brands fa-github mr-1.5"></i> วิธีลง Github Pages
+                </a>
+            </nav>
+
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-2 pb-4 space-y-2">
+            <a href="#about" class="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-50 font-medium">เกี่ยวกับฉัน</a>
+            <a href="#education" class="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-50 font-medium">การศึกษา</a>
+            <a href="#experience" class="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-50 font-medium">ประสบการณ์ชุมชน</a>
+            <a href="#activities" class="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-50 font-medium">กิจกรรม & ผู้นำ</a>
+            <a href="#certificates" class="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-50 font-medium">เกียรติบัตร</a>
+            <a href="#github-deploy" class="block px-3 py-2 rounded-md text-brand-700 bg-brand-50 font-medium">วิธีลง Github Pages</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-12 pb-16 md:pt-20 md:pb-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Info -->
+            <div class="md:col-span-7 space-y-6">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-purple-100 text-purple-800 text-xs font-semibold tracking-wide uppercase">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Academic Portfolio</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+                    สวัสดีค่ะ, ดิฉัน <br>
+                    <span class="gradient-text">นางสาวปฐมกรนัจ ประจันทร์นวล</span>
+                </h1>
+
+                <p class="text-lg text-slate-600 font-normal leading-relaxed">
+                    ชื่อเล่น <strong class="text-slate-900">"โมจิ"</strong> กำลังศึกษาหลักสูตรสาธารณสุขศาสตร์บัณฑิต 
+                    คณะสาธารณสุขศาสตร์และสหเวชศาสตร์ <span class="text-brand-700 font-medium">วิทยาลัยการสาธารณสุขสิริธร จังหวัดขอนแก่น</span>
+                </p>
+
+                <!-- Quote Card -->
+                <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm border-l-4 border-l-brand-600">
+                    <p class="text-sm italic text-slate-700">
+                        <i class="fa-solid fa-quote-left text-brand-400 mr-2"></i>
+                        "ความพยายามที่ไม่สิ้นสุด ความสำเร็จจะอยู่ตรงนั้นเสมอ"
+                    </p>
+                </div>
+
+                <!-- Contact & Actions -->
+                <div class="pt-2 flex flex-wrap gap-4 items-center">
+                    <a href="mailto:69202302051@scphkk.ac.th" class="px-5 py-3 rounded-xl bg-slate-900 text-white font-medium hover:bg-slate-800 transition-all flex items-center shadow-md shadow-slate-900/10">
+                        <i class="fa-regular fa-envelope mr-2"></i> ติดต่อทางอีเมล
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" class="px-5 py-3 rounded-xl bg-blue-50 text-blue-700 hover:bg-blue-100 font-medium transition-all flex items-center">
+                        <i class="fa-brands fa-facebook mr-2"></i> Facebook: MO JI
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Image / Profile Card -->
+            <div class="md:col-span-5">
+                <div class="relative mx-auto max-w-sm">
+                    <!-- Decorative Background Layer -->
+                    <div class="absolute -inset-2 bg-gradient-to-r from-brand-500 to-indigo-500 rounded-3xl blur-lg opacity-30 transform rotate-3"></div>
+                    
+                    <div class="relative bg-white rounded-3xl p-6 shadow-xl border border-slate-100 text-center space-y-4">
+                        <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-purple-100 shadow-md relative bg-slate-100 flex items-center justify-center">
+                            <!-- SVG Avatar Illustration -->
+                            <svg class="w-full h-full text-slate-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                            <span class="absolute bottom-2 right-2 bg-emerald-500 text-white p-1.5 rounded-full text-xs shadow" title="พร้อมปฏิบัติงาน">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">MISS PATHOMKORANUT</h3>
+                            <p class="text-sm text-slate-500">PRAJUNNUAL (MOJI)</p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-100 text-xs text-slate-600 text-left">
+                            <div><span class="text-slate-400">วันเกิด:</span> 12 พ.ย. 2550</div>
+                            <div><span class="text-slate-400">สัญชาติ:</span> ไทย</div>
+                            <div><span class="text-slate-400">เกรด ม.ปลาย:</span> <span class="font-bold text-emerald-600">3.95</span></div>
+                            <div><span class="text-slate-400">ศาสนา:</span> พุทธ</div>
+                        </div>
+
+                        <div class="pt-2">
+                            <span class="inline-block px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-full border border-emerald-200">
+                                <i class="fa-solid fa-heart-pulse mr-1"></i> นักสาธารณสุขรุ่นใหม่
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Work Style & Core Traits Section -->
+    <section class="py-12 bg-white border-y border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <h2 class="text-2xl font-bold text-slate-900">ตัวตนกับการทำงาน (Work Style)</h2>
+                <p class="text-slate-500 text-sm mt-1">มุ่งมั่น ทำจริง ลุยพื้นที่ เข้าถึงง่าย พร้อมเรียนรู้ตลอดเวลา</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-md transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-person-digging"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">ทำจริง ลุยจริง</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        มอบหมายงานอะไรมาพร้อมลุย ไม่เกี่ยงงาน ไม่กลัวเหนื่อย ชอบการได้ลงชุมชนและปฏิบัติงานจริงมากกว่าการเรียนแค่ในห้องเรียน
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-md transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-users text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">เข้ากับคนง่าย</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        ทำงานร่วมกับทีมได้ดี เข้าหาชาวบ้านในชุมชนได้ง่ายด้วยอัธยาศัยดี พูดคุยสื่อสารเรื่องสุขภาพด้วยภาษาง่ายๆ ที่เข้าใจทันที
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-md transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">พร้อมเรียนรู้ & พัฒนา</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        จุดไหนยังไม่เก่งก็พร้อมเปิดรับฟังคำแนะนำ ปรับปรุง และพัฒนาศักยภาพของตนเองอย่างต่อเนื่องสม่ำเสมอ
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Personal Background Section -->
+    <section id="education" class="py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <!-- Education Timeline -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-900">ประวัติการศึกษา (Education)</h2>
+                </div>
+
+                <div class="relative pl-6 border-l-2 border-slate-200 space-y-8">
+                    <!-- Current Degree -->
+                    <div class="relative group">
+                        <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-600 border-4 border-white shadow"></div>
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-brand-300 transition-all">
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-brand-100 text-brand-800 rounded-full">ปัจจุบัน</span>
+                            <h3 class="text-lg font-bold text-slate-900 mt-2">ระดับปริญญาตรี (สาธารณสุขศาสตร์บัณฑิต)</h3>
+                            <p class="text-brand-700 font-medium text-sm">วิทยาลัยการสาธารณสุขสิริธร จังหวัดขอนแก่น</p>
+                            <p class="text-slate-500 text-xs mt-1">คณะสาธารณสุขศาสตร์และสหเวชศาสตร์</p>
+                        </div>
+                    </div>
+
+                    <!-- High School -->
+                    <div class="relative group">
+                        <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-400 border-4 border-white"></div>
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-slate-300 transition-all">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-semibold px-2.5 py-1 bg-slate-100 text-slate-700 rounded-full">สำเร็จการศึกษา</span>
+                                <span class="text-xs text-emerald-600 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">GPAX 3.95</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mt-2">ระดับมัธยมศึกษาตอนปลาย</h3>
+                            <p class="text-slate-700 font-medium text-sm">โรงเรียนภูเรือวิทยา จังหวัดเลย</p>
+                            <p class="text-slate-500 text-xs mt-1">ได้รับการยกย่องเป็น "นักเรียนที่มีผลการเรียนดีเยี่ยม"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personal Info & Family Card -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-8 h-8 rounded-lg bg-slate-800 text-white flex items-center justify-center">
+                        <i class="fa-solid fa-address-card"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-900">ข้อมูลส่วนตัว & ครอบครัว</h2>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4 text-sm">
+                    <div class="space-y-3">
+                        <h4 class="font-bold text-slate-900 border-b border-slate-100 pb-2 text-xs uppercase tracking-wider text-slate-400">ข้อมูลทั่วไป</h4>
+                        <div class="flex justify-between py-1 border-b border-slate-50">
+                            <span class="text-slate-500">ชื่อ-สกุล:</span>
+                            <span class="font-medium text-slate-900">นางสาวปฐมกรนัจ ประจันทร์นวล</span>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-slate-50">
+                            <span class="text-slate-500">ชื่อภาษาอังกฤษ:</span>
+                            <span class="font-medium text-slate-900">Pathomkoranut Prajunnual</span>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-slate-50">
+                            <span class="text-slate-500">งานอดิเรก:</span>
+                            <span class="font-medium text-slate-900">เล่นกีฬา, ร้องเพลง</span>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-slate-50">
+                            <span class="text-slate-500">ความสามารถพิเศษ:</span>
+                            <span class="font-medium text-slate-900">บาสเกตบอล, ฟุตบอล, วิ่ง, สันทนาการ</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 pt-2">
+                        <h4 class="font-bold text-slate-900 border-b border-slate-100 pb-2 text-xs uppercase tracking-wider text-slate-400">ข้อมูลครอบครัว</h4>
+                        <div class="flex justify-between py-1 border-b border-slate-50">
+                            <span class="text-slate-500">บิดา:</span>
+                            <span class="font-medium text-slate-900">นายปกรณ์ ประจันทร์นวล (วิศวกร)</span>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-slate-50">
+                            <span class="text-slate-500">มารดา:</span>
+                            <span class="font-medium text-slate-900">นางจันทกานต์ ประจันทร์นวล (เกษตรกร)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Field Experience Section -->
+    <section id="experience" class="py-16 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Field Practice</span>
+                    <h2 class="text-3xl font-bold mt-1">ฝึกประสบการณ์การลงพื้นที่ชุมชน</h2>
+                </div>
+                <p class="text-slate-400 text-sm max-w-md mt-2 md:mt-0">
+                    นำความรู้ทฤษฎีสู่การปฏิบัติจริงในชุมชน เพื่อการตรวจคัดกรองและส่งเสริมสุขภาพประชาชนอย่างเข้าถึงง่าย
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- Highlight Box -->
+                <div class="space-y-6">
+                    <div class="p-6 rounded-2xl bg-slate-800/80 border border-slate-700/80 space-y-4">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-heart-circle-check"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">ตรวจคัดกรองสุขภาพเบื้องต้น & พาออกกำลังกาย</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            เข้าร่วมเป็นจิตอาสาพาชาวบ้านในชุมชนออกกำลังกาย เพื่อส่งเสริมการดูแลสุขภาพเชิงป้องกัน พร้อมทั้งให้บริการวัดความดันโลหิต ตรวจน้ำตาลในเลือด/เบาหวานเบื้องต้น
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="text-xs px-3 py-1 rounded-full bg-slate-700 text-emerald-300">วัดความดัน</span>
+                            <span class="text-xs px-3 py-1 rounded-full bg-slate-700 text-emerald-300">ตรวจเบาหวาน</span>
+                            <span class="text-xs px-3 py-1 rounded-full bg-slate-700 text-emerald-300">ผู้นำออกกำลังกาย</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-slate-800/80 border border-slate-700/80 space-y-4">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">สื่อสารสุขภาพด้วยภาษาง่ายๆ</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            เน้นการสื่อสารเรื่องสุขภาพและโรคติดต่อในท้องถิ่นด้วยภาษาพูดที่ชาวบ้านเข้าใจง่าย ไม่ซับซ้อน ช่วยให้คนในชุมชนตระหนักและเข้าใจการดูแลตนเองได้ดียิ่งขึ้น
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Graphic Placeholder / Card Representation -->
+                <div class="bg-gradient-to-br from-emerald-900/30 to-brand-900/30 rounded-3xl p-8 border border-slate-700/60 text-center space-y-6">
+                    <div class="w-20 h-20 mx-auto rounded-2xl bg-emerald-500 text-slate-900 flex items-center justify-center text-3xl font-bold shadow-lg shadow-emerald-500/20">
+                        <i class="fa-solid fa-hand-holding-medical"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-bold text-white">ลงพื้นที่จริง เข้าถึงชาวบ้าน</h4>
+                        <p class="text-slate-400 text-sm mt-2">"จุดที่รู้สึกว่าเป็นตัวเองที่สุดคือตอนได้ลงพื้นที่ชุมชน ได้คุยกับชาวบ้านตรงๆ"</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800 text-xs text-slate-400 flex justify-around">
+                        <div>
+                            <span class="block text-xl font-bold text-emerald-400">100%</span>
+                            <span>ความตั้งใจ</span>
+                        </div>
+                        <div>
+                            <span class="block text-xl font-bold text-emerald-400">จิตสาธารณะ</span>
+                            <span>บริการชุมชน</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities & Leadership Section -->
+    <section id="activities" class="py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-800 rounded-full">Leadership & Sports</span>
+            <h2 class="text-3xl font-bold text-slate-900 mt-2">กิจกรรมด้านผู้นำ และกีฬา</h2>
+            <p class="text-slate-500 text-sm mt-1">บทบาทตัวแทนระดับจังหวัด กีฬาเยาวชนแห่งชาติ และสภานักเรียน</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Item 1: Youth National Games -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-lg">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+                <span class="text-xs font-semibold text-amber-600">6-16 พฤศจิกายน 2567</span>
+                <h3 class="text-lg font-bold text-slate-900">นักกีฬาตัวแทนจังหวัดเลย</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    เข้าร่วมการแข่งขันกีฬาเยาวชนแห่งชาติ ครั้งที่ 40 รอบคัดเลือกภาค 3 ในประเภทกีฬาบาสเกตบอล/วิ่ง
+                </p>
+            </div>
+
+            <!-- Item 2: Student Council -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-lg">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <span class="text-xs font-semibold text-purple-600">คณะกรรมการสภานักเรียน</span>
+                <h3 class="text-lg font-bold text-slate-900">กรรมการสารวัตรนักเรียน</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    ปฏิบัติหน้าที่กรรมการนักเรียนและสารวัตรนักเรียน รร.ภูเรือวิทยา มุ่งมั่นในการกำกับดูแลวินัยและช่วยเหลือกิจกรรมโรงเรียน
+                </p>
+            </div>
+
+            <!-- Item 3: Sports Day Parade Lead -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center text-lg">
+                    <i class="fa-solid fa-flag"></i>
+                </div>
+                <span class="text-xs font-semibold text-rose-600">กิจกรรมกีฬาสี 2567</span>
+                <h3 class="text-lg font-bold text-slate-900">ตัวแทนถือป้ายเทิดพระเกียรติ</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    ได้รับเลือกเป็นตัวแทนถือป้ายเทิดพระเกียรติ และร่วมขบวนพาเหรดกีฬาสี รวมถึงเข้าร่วมแข่งขันกีฬาในคณะสี
+                </p>
+            </div>
+
+            <!-- Item 4: Teacher Appreciation Day -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-lg">
+                    <i class="fa-solid fa-hands-praying"></i>
+                </div>
+                <span class="text-xs font-semibold text-indigo-600">ระดับมัธยมศึกษา ม.6/5</span>
+                <h3 class="text-lg font-bold text-slate-900">ตัวแทนถือพานไหว้ครู</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    ได้รับการคัดเลือกจากเพื่อนและครูให้เป็นตัวแทนถือพานในพิธีไหว้ครู แสดงถึงความรับผิดชอบและความไว้วางใจ
+                </p>
+            </div>
+
+            <!-- Item 5: Flower Parade -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg">
+                    <i class="fa-solid fa-fan"></i>
+                </div>
+                <span class="text-xs font-semibold text-emerald-600">29 ธันวาคม 2566</span>
+                <h3 class="text-lg font-bold text-slate-900">ขบวนแห่รถบุปผชาติ</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    เข้าร่วมขบวนแห่รถบุปผชาติ ในงานเทศกาลไม้ดอกเมืองหนาว ครั้งที่ 31 ณ อ.ภูเรือ จ.เลย
+                </p>
+            </div>
+
+            <!-- Item 6: Anti-Drug Parade -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all space-y-3">
+                <div class="w-10 h-10 rounded-xl bg-red-100 text-red-700 flex items-center justify-center text-lg">
+                    <i class="fa-solid fa-ban-smoking"></i>
+                </div>
+                <span class="text-xs font-semibold text-red-600">World Drug Day 2567</span>
+                <h3 class="text-lg font-bold text-slate-900">ตัวแทนถือป้ายต่อต้านยาเสพติด</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    เดินรณรงค์เนื่องในวันต่อต้านยาเสพติดโลก และร่วมประกวด Be Smart Say No to Drugs 2
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Gallery Section -->
+    <section id="certificates" class="py-16 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-semibold px-3 py-1 bg-brand-100 text-brand-800 rounded-full">Honors & Certifications</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-2">เกียรติบัตรและรางวัลที่ได้รับ</h2>
+                <p class="text-slate-500 text-sm mt-1">ผลงานความสำเร็จด้านการเรียน กิจกรรมวิชาการ และจิตสาธารณะ</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8" id="cert-filters">
+                <button class="cert-filter-btn px-4 py-2 rounded-xl text-sm font-medium bg-brand-600 text-white shadow-sm" data-filter="all">ทั้งหมด</button>
+                <button class="cert-filter-btn px-4 py-2 rounded-xl text-sm font-medium bg-white text-slate-600 hover:bg-slate-200" data-filter="academic">วิชาการ/วิทย์สุขภาพ</button>
+                <button class="cert-filter-btn px-4 py-2 rounded-xl text-sm font-medium bg-white text-slate-600 hover:bg-slate-200" data-filter="leadership">ผู้นำ/สภานักเรียน</button>
+                <button class="cert-filter-btn px-4 py-2 rounded-xl text-sm font-medium bg-white text-slate-600 hover:bg-slate-200" data-filter="ethics">คุณธรรม/จิตสาธารณะ</button>
+            </div>
+
+            <!-- Certificate Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="cert-grid">
+                
+                <!-- Cert 1 -->
+                <div class="cert-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all" data-category="academic">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-emerald-100 text-emerald-800 rounded-md">ผลการเรียน</span>
+                        <i class="fa-solid fa-award text-amber-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-base mb-1">นักเรียนที่มีผลการเรียนดีเยี่ยม</h3>
+                    <p class="text-xs text-brand-700 font-medium mb-2">โรงเรียนภูเรือวิทยา</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        ได้รับการยกย่องเป็นนักเรียนผลการเรียนดีเยี่ยม เกรดเฉลี่ยสะสม 3.95
+                    </p>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="cert-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all" data-category="academic">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-blue-100 text-blue-800 rounded-md">วิทย์สุขภาพ</span>
+                        <i class="fa-solid fa-certificate text-brand-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-base mb-1">อบรมปฏิบัติการสายวิทย์สุขภาพ 2024</h3>
+                    <p class="text-xs text-brand-700 font-medium mb-2">ศูนย์แนะแนวและเตรียมสอบขอนแก่น (20-22 ก.ค. 2567)</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        ผ่านโครงการเปิดโลกวิชาการ กิจกรรมอบรมเชิงปฏิบัติการสายวิทย์สุขภาพ
+                    </p>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="cert-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all" data-category="ethics">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-purple-100 text-purple-800 rounded-md">คุณธรรม</span>
+                        <i class="fa-solid fa-heart text-rose-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-base mb-1">ค่ายอบรมเยาวชน รุ่นที่ 3</h3>
+                    <p class="text-xs text-brand-700 font-medium mb-2">มูลนิธิบ้านลูกรัก (21 กรกฎาคม 2567)</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        ได้รับการยกย่องเป็น "ผู้มีคุณธรรม จริยธรรม และค่านิยมที่พึงประสงค์"
+                    </p>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="cert-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all" data-category="academic">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-indigo-100 text-indigo-800 rounded-md">อบรมวิทย์-คณิต</span>
+                        <i class="fa-solid fa-flask text-indigo-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-base mb-1">อบรมทักษะปฏิบัติการวิทย์-คณิต</h3>
+                    <p class="text-xs text-brand-700 font-medium mb-2">คณะวิทยาศาสตร์ฯ มหาวิทยาลัยราชภัฏเลย (3 ก.ย. 2566)</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        สำหรับนักเรียนห้องเรียนพิเศษวิทยาศาสตร์ โรงเรียนภูเรือวิทยา
+                    </p>
+                </div>
+
+                <!-- Cert 5 -->
+                <div class="cert-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all" data-category="leadership">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-amber-100 text-amber-800 rounded-md">สภานักเรียน</span>
+                        <i class="fa-solid fa-users-gear text-amber-600 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-base mb-1">ปฏิบัติหน้าที่คณะกรรมการสภานักเรียน</h3>
+                    <p class="text-xs text-brand-700 font-medium mb-2">โรงเรียนภูเรือวิทยา</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        ตำแหน่งคณะกรรมการนักเรียน และกรรมการสารวัตรนักเรียน
+                    </p>
+                </div>
+
+                <!-- Cert 6 -->
+                <div class="cert-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all" data-category="ethics">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-emerald-100 text-emerald-800 rounded-md">จิตสาธารณะ</span>
+                        <i class="fa-solid fa-hand-holding-heart text-emerald-600 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-base mb-1">รางวัลจิตสาธารณะ & มุ่งมั่นในการทำงาน</h3>
+                    <p class="text-xs text-brand-700 font-medium mb-2">โรงเรียนภูเรือวิทยา</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        ได้รับเกียรติบัตรด้าน "มีจิตสาธารณะ" และโครงการขยะแลกแต้ม
+                    </p>
+                </div>
+
+                <!-- Cert 7 -->
+                <div class="cert-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all" data-category="ethics">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-red-100 text-red-800 rounded-md">ปปส. ภาค 4</span>
+                        <i class="fa-solid fa-shield-halved text-red-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-base mb-1">อบรม "รู้คิด รู้ทัน ป้องกันยาเสพติด"</h3>
+                    <p class="text-xs text-brand-700 font-medium mb-2">สำนักงานป้องกันและปราบปรามยาเสพติด ภาค 4</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        ผ่านการอบรมให้ความรู้สร้างภูมิคุ้มกันยาเสพติดในสถานศึกษา
+                    </p>
+                </div>
+
+                <!-- Cert 8 -->
+                <div class="cert-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all" data-category="academic">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-blue-100 text-blue-800 rounded-md">การแข่งขันวิทย์</span>
+                        <i class="fa-solid fa-brain text-blue-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-base mb-1">ตอบปัญหาวิทยาศาสตร์ ระดับ ม.ปลาย</h3>
+                    <p class="text-xs text-brand-700 font-medium mb-2">สัปดาห์วิทยาศาสตร์แห่งชาติ</p>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        เข้าร่วมการแข่งขันตอบปัญหาวิทยาศาสตร์ และงานสัปดาห์วิทย์ มข.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Pages Setup Guide Section -->
+    <section id="github-deploy" class="py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-br from-slate-900 to-brand-950 rounded-3xl p-8 md:p-12 text-white border border-slate-800 shadow-2xl">
+            <div class="flex items-center space-x-3 mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-2xl">
+                    <i class="fa-brands fa-github"></i>
+                </div>
+                <div>
+                    <span class="text-xs font-semibold text-brand-300 uppercase tracking-wider">Deployment Tutorial</span>
+                    <h2 class="text-2xl md:text-3xl font-bold">ขั้นตอนการนำเว็บนี้ขึ้น GitHub Pages (ฟรี)</h2>
+                </div>
+            </div>
+
+            <p class="text-slate-300 text-sm mb-8 leading-relaxed max-w-3xl">
+                คุณสามารถนำโค้ดไฟล์นี้ (`index.html`) ไปเปิดให้ออนไลน์เป็นเว็บไซต์ประวัติส่วนตัวได้ทันทีโดยใช้บริการ **GitHub Pages** ตาม 4 ขั้นตอนง่ายๆ ดังนี้:
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Step 1 -->
+                <div class="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="w-7 h-7 rounded-full bg-brand-500 text-white font-bold text-xs flex items-center justify-center">1</span>
+                        <span class="text-xs text-slate-400">สร้าง Repository</span>
+                    </div>
+                    <h4 class="font-bold text-white text-base">สร้าง GitHub Repository</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        สมัครใช้งาน <a href="https://github.com" target="_blank" class="text-brand-300 underline">GitHub.com</a> จากนั้นกดปุ่ม <strong>New Repository</strong> ตั้งชื่อเช่น <code>moji-portfolio</code> เลือกตั้งเป็น <strong>Public</strong>
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="w-7 h-7 rounded-full bg-brand-500 text-white font-bold text-xs flex items-center justify-center">2</span>
+                        <span class="text-xs text-slate-400">อัปโหลดไฟล์</span>
+                    </div>
+                    <h4 class="font-bold text-white text-base">บันทึกไฟล์เป็น `index.html`</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        คัดลอกโค้ดทั้งหมดนี้ไปวางในไฟล์ชื่อ <strong>index.html</strong> แล้วกด <strong>Upload files</strong> ขึ้นไปยัง GitHub Repository ที่สร้างไว้
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="w-7 h-7 rounded-full bg-brand-500 text-white font-bold text-xs flex items-center justify-center">3</span>
+                        <span class="text-xs text-slate-400">ตั้งค่า Pages</span>
+                    </div>
+                    <h4 class="font-bold text-white text-base">เปิดใช้งาน GitHub Pages</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        เข้าไปที่เมนู <strong>Settings</strong> > <strong>Pages</strong> ของ Repository นั้น ตรงหัวข้อ Source ให้เลือก Branch เป็น <code>main</code> หรือ <code>master</code> แล้วกด <strong>Save</strong>
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="w-7 h-7 rounded-full bg-emerald-500 text-slate-900 font-bold text-xs flex items-center justify-center">4</span>
+                        <span class="text-xs text-emerald-400 font-semibold">สำเร็จ!</span>
+                    </div>
+                    <h4 class="font-bold text-white text-base">เข้าชมเว็บไซต์</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        รอประมาณ 1-2 นาที คุณจะได้ลิงก์เว็บไซต์ เช่น <code>https://username.github.io/moji-portfolio/</code> สำหรับนำไปใส่อกตั้งหรือแนบเรซูเม่ได้ทันที!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 space-y-4 md:space-y-0">
+            <div>
+                &copy; Academic Portfolio - นางสาวปฐมกรนัจ ประจันทร์นวล (โมจิ)
+            </div>
+            <div class="flex space-x-6">
+                <span>วิทยาลัยการสาธารณสุขสิริธร จังหวัดขอนแก่น</span>
+                <a href="mailto:69202302051@scphkk.ac.th" class="text-brand-600 hover:underline">69202302051@scphkk.ac.th</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts for interactivity -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Certificates Filtering Logic
+        const filterBtns = document.querySelectorAll('.cert-filter-btn');
+        const certCards = document.querySelectorAll('.cert-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-brand-600', 'text-white', 'shadow-sm');
+                    b.classList.add('bg-white', 'text-slate-600');
+                });
+                btn.classList.remove('bg-white', 'text-slate-600');
+                btn.classList.add('bg-brand-600', 'text-white', 'shadow-sm');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                certCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
